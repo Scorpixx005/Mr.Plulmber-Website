@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 35% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 35% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 35% 12%;
+
+    /* Deep navy brand */
+    --primary: 215 60% 16%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 215 60% 22%;
+
+    /* Fresh aqua accent */
+    --accent: 190 85% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 190 85% 39%;
+
+    --secondary: 210 30% 96%;
+    --secondary-foreground: 215 60% 16%;
+
+    --muted: 210 25% 96%;
+    --muted-foreground: 215 15% 42%;
+
+    --soft: 200 40% 97%;
+    --soft-foreground: 215 35% 18%;
+
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --emergency: 8 88% 52%;
+    --emergency-foreground: 0 0% 100%;
+
+    --border: 215 20% 90%;
+    --input: 215 20% 90%;
+    --ring: 190 85% 45%;
+
+    --radius: 1rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(215 60% 16%) 0%, hsl(210 55% 22%) 60%, hsl(190 60% 28%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(190 85% 45%), hsl(195 90% 38%));
+    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%), hsl(200 40% 97%));
+
+    --shadow-card: 0 4px 20px -8px hsl(215 60% 16% / 0.08);
+    --shadow-elevated: 0 20px 50px -20px hsl(215 60% 16% / 0.18);
+    --shadow-glow: 0 10px 40px -10px hsl(190 85% 45% / 0.35);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply px-5 sm:px-8 lg:px-12;
+  }
+  .section {
+    @apply py-16 md:py-24;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent;
+  }
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05];
+  }
+  .heading-lg {
+    @apply text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.1];
+  }
+  .heading-md {
+    @apply text-2xl md:text-3xl font-bold leading-tight;
+  }
+}
